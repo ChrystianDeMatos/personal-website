@@ -6,13 +6,16 @@ export default function Portifolio() {
 
   const [projects, setProjects] = useState([])
 
-  useEffect(async function () {
-    fetch('/api/teste')
-      .then(async (response) => {
-        const resp = await response.json()
-        console.log(resp)
-        setProjects(resp)
-      })
+  useEffect(() => {
+    async function fetchData() {
+      fetch('/api/teste')
+        .then(async (response) => {
+          const resp = await response.json()
+          console.log(resp)
+          setProjects(resp)
+        })
+    }
+    fetchData()
   }, [])
 
   return (

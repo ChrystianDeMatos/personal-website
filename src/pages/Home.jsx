@@ -52,7 +52,6 @@ export default function Home() {
         <img className={classes.profilePicture} src={profilePic} />
         <h1 className={classes.profileTitle}>Chrystian de Matos</h1>
         <Grid justify="center" container spacing={2}>
-
           <Grid item>
             <SocialIcon
               iconComponent={<Email className={classes.socialIcon} fontSize="large" />}

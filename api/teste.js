@@ -59,14 +59,22 @@ const projects = [
     {
         title: "Site para fotógrafo",
         description: "Site feito para mostrar trabalhos do fotógrafo, além disso os clientes finais podem escolher as fotos que desejam e também olhar um preview do seu Álbum.",
-        technologies: ["aspnet", "react", "mongodb"],
         technologies: [
             newTech("csharp", "C#"),
             newTech("dotnet", ".NET"),
             newTech("react", "React"),
             newTech("mongodb", "MongoDB"),
         ],
-        image: "./neonjanitor.png",
+        image: "./fabiomatos.png",
         link: "https://www.figma.com/proto/UWAVndRo9zpmYwM23WMLsP/Fabio-Matos-Projeto?node-id=2%3A1&scaling=min-zoom"
+    },
+    {
+        title: "Ficha Kaiju RPG",
+        description: "Pagina criada para jogar o Kaiju RPG.",
+        technologies: [
+            newTech("react", "React"),
+        ],
+        image: "./kaiju.png",
+        link: "https://kaiju-rpg.vercel.app"
     },
 ]

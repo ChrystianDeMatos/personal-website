@@ -6,6 +6,7 @@ export default function SocialIcon({ tooltip, link, iconComponent }) {
     <Tooltip title={tooltip}>
       <a
         target='_blank'
+        rel="noopener noreferrer"
         href={link}
       >
         {iconComponent}

@@ -9,7 +9,7 @@ import { CardMedia, Grid, Paper, Tooltip } from '@material-ui/core';
 
 import Icon from './Icon'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     // minWidth: 275,
   },
@@ -23,13 +23,13 @@ const useStyles = makeStyles({
     height: 0,
     paddingTop: '56.25%', // 16:9
   },
-});
+  iconsPaper: {
+    backgroundColor: '#fff'
+  }
+}));
 
 export default function PortifolioCard({ title, description, technologies, image, link }) {
   const classes = useStyles()
-  useEffect(() => {
-    console.log(technologies)
-  }, [])
   return (
     <Card item className={classes.root}>
       <CardMedia
@@ -58,36 +58,26 @@ export default function PortifolioCard({ title, description, technologies, image
           alignItems="center"
           justify="space-between"
         >
-          {link ? <Button size="small">Link</Button> : null}
-          <Paper>
-            <Grid container>
+          {
+            link ?
+              <Button size="small" href={link}>Link</Button> :
+              <Button size="small" disabled>Link</Button>
+          }
+          <Paper className={classes.iconsPaper}>
+            <Grid container alignItems="center">
               {
                 technologies.map((technology) => (
-                  <Tooltip title={technology.tooltip} placement="top">
-                    <Grid item>
-                      <Icon icon={technology.icon} width={43} />
-                    </Grid>
-                  </Tooltip>
+                  <Icon
+                    item
+                    icon={technology.icon}
+                    tooltip={technology.tooltip}
+                    width={40}
+                  />
                 ))
               }
-              {/* <Tooltip title="C#" placement="top">
-
-                <Grid item>
-                  <Icon iconName="csharp" width={43} />
-                </Grid>
-              </Tooltip>
-
-              <Tooltip title="Unity" placement="top">
-
-                <Grid item>
-                  <Icon iconName="unity" width={43} />
-                </Grid>
-              </Tooltip> */}
-
             </Grid>
           </Paper>
         </Grid>
-
       </CardActions>
     </Card>
 

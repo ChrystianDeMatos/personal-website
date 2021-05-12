@@ -1,34 +1,29 @@
 import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types';
+import { makeStyles, Tooltip } from '@material-ui/core';
 
+const useStyles = makeStyles({
+  color: {
+    filter: 'invert(0)'
+  }
+});
 
-const IconComponent = ({ name, width }) => {
+export default function Icon({ icon: iconName = 'unity', width = 64, tooltip }) {
+  const classes = useStyles()
   let [icon, setIcon] = useState('');
 
   useEffect(async () => {
     try {
-      let importedIcon = await import(`../assets/icons/${name}.svg`);
+      let importedIcon = await import(`../assets/icons/${iconName}.svg`);
       setIcon(importedIcon.default)
     } catch (e) {
-      console.log("Missing icon: " + name)
+      console.log("Missing icon: " + iconName)
       setIcon((<></>))
     }
   }, []);
 
-  return <img alt='' src={icon} width={width} />;
-};
-
-export default function Icon({ icon = 'unity', width = 64 }) {
   return (
-    <IconComponent
-      name={icon}
-      width={width}
-      // fill="darkblue"
-      // height="100"
-    />
-  )
-}
-
-Icon.propTypes = {
-  iconName: PropTypes.string,
+    <Tooltip title={tooltip} placement="top">
+      <img className={classes.color} alt='' src={icon} width={width} />
+    </Tooltip>
+  );
 };

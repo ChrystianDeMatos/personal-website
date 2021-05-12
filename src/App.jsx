@@ -14,6 +14,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import Footer from './components/Footer';
 
 
 
@@ -32,6 +33,7 @@ function App() {
           </Route>
         </Switch>
       </Container>
+      <Footer />
     </ThemeProvider>
   );
 }
