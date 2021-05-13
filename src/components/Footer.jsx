@@ -20,11 +20,11 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(2),
     boxShadow: theme.shadows[2],
     '& a': {
-      color: '#00acff',
+      color: '#e73d7d',
       textDecoration: 'none',
     },
 
-    background: 'linear-gradient(-45deg, #d4d4d4, #202020)',
+    background: 'linear-gradient(-45deg, #c7c7c7, #202020)',
     backgroundSize: '400% 400%',
     animation: '$gradient 15s ease infinite',
   },
@@ -69,9 +69,6 @@ export default function Footer() {
           </Grid>
         </Grid>
       </Container>
-      <div className={classes.credits}>
-
-      </div>
     </Box>
   )
 }

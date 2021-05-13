@@ -11,7 +11,7 @@ const projects = [
         description: "Jogo criado na Unity 3D onde eu orientei minha equipe com o desenvolvimento e também atuei como programador e game designer do mesmo.",
         technologies: [
             newTech("unity", "Unity"),
-            newTech("csharp", "C#")
+            newTech("csharp", "CSharp")
         ],
         image: "./neonjanitor.png",
         link: "https://chrystiandematos.itch.io/neon-janitor-88"
@@ -21,7 +21,7 @@ const projects = [
         description: "Jogo que foi feito com o objetivo de participar de uma Game Jam de 48h, nele fiz todo o desenvolvimento apenas ficando fora os modelos 3D e músicas.",
         technologies: [
             newTech("unity", "Unity"),
-            newTech("csharp", "C#")
+            newTech("csharp", "CSharp")
         ],
         image: "./outofcontrol.gif",
         link: "https://chrystiandematos.itch.io/out-of-control"
@@ -31,7 +31,7 @@ const projects = [
         description: "Fiz toda a inteligência artificial de todos os inimigos, o jogo atualmente continua em desenvolvimento e é planejado ser lançado na loja virtual da Steam.",
         technologies: [
             newTech("unity", "Unity"),
-            newTech("csharp", "C#")
+            newTech("csharp", "CSharp")
         ],
         image: "./spaceroguelite.png",
         link: ""
@@ -50,7 +50,7 @@ const projects = [
         title: "Drive Uploader",
         description: "Extensão de editor(Sony Vegas 13) que serve para enviar arquivos recém renderizados para a nuvem do Drive.",
         technologies: [
-            newTech("csharp", "C#"),
+            newTech("csharp", "CSharp"),
             newTech("dotnet", ".NET"),
         ],
         image: "./driveuploader.png",
@@ -60,7 +60,7 @@ const projects = [
         title: "Site para fotógrafo",
         description: "Site feito para mostrar trabalhos do fotógrafo, além disso os clientes finais podem escolher as fotos que desejam e também olhar um preview do seu Álbum.",
         technologies: [
-            newTech("csharp", "C#"),
+            newTech("csharp", "CSharp"),
             newTech("dotnet", ".NET"),
             newTech("react", "React"),
             newTech("mongodb", "MongoDB"),

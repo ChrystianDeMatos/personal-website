@@ -11,27 +11,34 @@ import Icon from './Icon'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // minWidth: 275,
-  },
+    display:'flex',
+    flexDirection: 'column',
+    minWidth: '100%'
+  // minWidth: 275,
+},
   title: {
-    fontSize: 14,
-  },
+  fontSize: 14,
+},
   pos: {
-    marginBottom: 12,
-  },
+  marginBottom: 12,
+},
   media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9
-  },
+  height: 0,
+  paddingTop: '56.25%', // 16:9
+},
   iconsPaper: {
-    backgroundColor: '#fff'
-  }
+  backgroundColor: '#fff'
+},
+  cardActions: {
+  marginTop: 'auto'
+}
+  
 }));
 
-export default function PortifolioCard({ title, description, technologies, image, link }) {
+export default function PortfolioCard({ title, description, technologies, image, link }) {
   const classes = useStyles()
   return (
-    <Card item className={classes.root}>
+    <Card className={classes.root}>
       <CardMedia
         className={classes.media}
         image={image}
@@ -51,12 +58,12 @@ export default function PortifolioCard({ title, description, technologies, image
           {description}
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions className={classes.cardActions}>
         <Grid
           container
           direction="row"
-          alignItems="center"
           justify="space-between"
+          alignItems="flex-end"
         >
           {
             link ?
@@ -66,9 +73,10 @@ export default function PortifolioCard({ title, description, technologies, image
           <Paper className={classes.iconsPaper}>
             <Grid container alignItems="center">
               {
-                technologies.map((technology) => (
+                technologies.map((technology, index) => (
                   <Icon
                     item
+                    key={index}
                     icon={technology.icon}
                     tooltip={technology.tooltip}
                     width={40}

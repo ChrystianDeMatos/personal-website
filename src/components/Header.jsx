@@ -44,7 +44,6 @@ export default function Header() {
           Chrystian de Matos
         </Typography>
         <Button
-          variant="h6"
           className={classes.navLink}
           component={NavLink}
           to="/sobre"
@@ -52,7 +51,6 @@ export default function Header() {
           Sobre
         </Button>
         <Button
-          variant="h6"
           className={classes.navLink}
           component={NavLink}
           to="/portfolio"

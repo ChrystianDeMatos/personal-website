@@ -2,11 +2,12 @@ import React from 'react'
 import profilePic from '../assets/profilePicture.jfif'
 import { makeStyles } from '@material-ui/core/styles';
 
-import Portifolio from '../components/Portifolio'
+import Portfolio from '../components/Portfolio'
 import { Box, Grid, Paper, Typography } from '@material-ui/core';
 // import Icon from '../components/Icon';
 import Background from '../components/Background';
 import SocialIcon from '../components/SocialIcon'
+import Profile3D from '../components/Profile3D'
 
 // import {ReactComponent as Gmail} from '../assets/icons/gmail.svg'
 // import {ReactComponent as Github} from '../assets/icons/github.svg'
@@ -23,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
     border: `4px solid ${theme.palette.primary.main}`,
   },
   profileTitle: {
-    color: theme.palette.primary.main
+    color: theme.palette.primary.main,
+    marginTop: '10px'
   },
   profileComponent: {
     display: 'flex',
@@ -35,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   profileText: {
     // width: '50'
   },
-  portifolioTitle: {
+  portfolioTitle: {
     color: theme.palette.primary.main,
   },
   socialIcon: {
@@ -49,8 +51,11 @@ export default function Home() {
     <React.Fragment>
       <Box className={classes.profileComponent}>
 
+        {/* <Profile3D className={classes.profilePicture3D}/> */}
+
         <img className={classes.profilePicture} src={profilePic} />
-        <h1 className={classes.profileTitle}>Chrystian de Matos</h1>
+        <Typography className={classes.profileTitle} variant="h4" component="h4">Chrystian de Matos</Typography>
+
         <Grid justify="center" container spacing={2}>
           <Grid item>
             <SocialIcon
@@ -85,9 +90,9 @@ export default function Home() {
         <Background />
       </Box>
 
-      <h1>Portifolio</h1>
+      <Typography className={classes.portfolioTitle} variant="h5" component="h5">Portfólio</Typography>
 
-      <Portifolio />
+      <Portfolio />
 
     </React.Fragment>
 

@@ -11,14 +11,17 @@ export default function Icon({ icon: iconName = 'unity', width = 64, tooltip }) 
   const classes = useStyles()
   let [icon, setIcon] = useState('');
 
-  useEffect(async () => {
-    try {
-      let importedIcon = await import(`../assets/icons/${iconName}.svg`);
-      setIcon(importedIcon.default)
-    } catch (e) {
-      console.log("Missing icon: " + iconName)
-      setIcon((<></>))
+  useEffect(() => {
+    async function findIcon(){
+      try {
+        let importedIcon = await import(`../assets/icons/${iconName}.svg`);
+        setIcon(importedIcon.default)
+      } catch (e) {
+        console.log("Missing icon: " + iconName)
+        setIcon((<></>))
+      }
     }
+    findIcon()
   }, []);
 
   return (
