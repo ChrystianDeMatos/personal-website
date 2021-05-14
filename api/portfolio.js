@@ -8,7 +8,7 @@ function newTech (icon, name) { return {icon: icon, tooltip: name} }
 const projects = [
     {
         title: "Neon Janitor 88",
-        description: "Jogo criado na Unity 3D onde eu orientei minha equipe com o desenvolvimento e também atuei como programador e game designer do mesmo.",
+        description: "Jogo criado na Unity onde eu orientei minha equipe com o desenvolvimento e também atuei como programador e game designer do mesmo.",
         technologies: [
             newTech("unity", "Unity"),
             newTech("csharp", "CSharp")
@@ -18,7 +18,7 @@ const projects = [
     },
     {
         title: "Out of Control",
-        description: "Jogo que foi feito com o objetivo de participar de uma Game Jam de 48h, nele fiz todo o desenvolvimento apenas ficando fora os modelos 3D e músicas.",
+        description: "Jogo que foi feito com o objetivo de participar de uma Game Jam de 48h, nele realizei todo o desenvolvimento, ficando fora apenas os modelos 3D e músicas.",
         technologies: [
             newTech("unity", "Unity"),
             newTech("csharp", "CSharp")
@@ -28,7 +28,7 @@ const projects = [
     },
     {
         title: "Space Roguelite",
-        description: "Fiz toda a inteligência artificial de todos os inimigos, o jogo atualmente continua em desenvolvimento e é planejado ser lançado na loja virtual da Steam.",
+        description: "Participei do desenvolvimento do jogo, onde eu criava a inteligência artificial de todos os inimigos, atualmente a produção está pausada.",
         technologies: [
             newTech("unity", "Unity"),
             newTech("csharp", "CSharp")
@@ -38,7 +38,7 @@ const projects = [
     },
     {
         title: "Contador de Mensagens",
-        description: "Bot de Discord que grava diariamente o número de mensagens enviadas em um dia no servidor, e com isso mostra os recordes para os usuários.",
+        description: "Bot de Discord que grava diariamente o número de mensagens enviadas no dia pelo servidor, assim permitindo aos usuários ver o recorde de seu servidor.",
         technologies: [
             newTech("nodejs", "NodeJS"),
             newTech("postgresql", "PostgreSQL"),
@@ -48,7 +48,7 @@ const projects = [
     },
     {
         title: "Drive Uploader",
-        description: "Extensão de editor(Sony Vegas 13) que serve para enviar arquivos recém renderizados para a nuvem do Drive.",
+        description: "Extensão do editor de vídeo Sony Vegas que serve para enviar arquivos recém renderizados para a nuvem do Drive.",
         technologies: [
             newTech("csharp", "CSharp"),
             newTech("dotnet", ".NET"),
@@ -70,7 +70,7 @@ const projects = [
     },
     {
         title: "Ficha Kaiju RPG",
-        description: "Pagina criada para jogar o Kaiju RPG.",
+        description: "Página criada com React para a jogar RPG de mesa online.",
         technologies: [
             newTech("react", "React"),
         ],
