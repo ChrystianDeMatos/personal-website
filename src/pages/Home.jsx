@@ -78,7 +78,7 @@ export default function Home() {
         <Box mx={[0, 24, 36, 48]}>
           <Paper className={classes.profileText} elevation={3}>
             <Box m={2}>
-              <Typography>Programador C# autodidata, apaixonado por tecnologia, atualmente fazendo projetos de programação em grupos e individuais. Buscando experiência na área, portanto estou disposto a aprender e me esforçar ao máximo para conquistar a vaga.</Typography>
+              <Typography>Programador e desenvolvedor de jogos, apaixonado por tecnologia, atualmente fazendo projetos de programação em grupos e individuais. Buscando experiência na área, visto que meu sonho é trabalhar na industria do desenvolvimento de software.</Typography>
             </Box>
           </Paper>
         </Box>

@@ -6,7 +6,7 @@ import { AppBar, Button, Typography } from '@material-ui/core';
 import { Link as LinkScroll, animateScroll } from "react-scroll";
 
 import {
-  NavLink,
+  // NavLink,
   Link
 } from "react-router-dom";
 

@@ -66,7 +66,7 @@ export default function PortfolioCard({ title, description, technologies, image,
         >
           {
             link ?
-              <Button size="small" href={link}>Link</Button> :
+              <Button size="small" href={link} rel='noopener noreferrer' target='_blank' >Link</Button> :
               <Button size="small" disabled>Link</Button>
           }
           <Paper className={classes.iconsPaper}>

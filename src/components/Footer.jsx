@@ -37,7 +37,7 @@ export default function Footer() {
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
             <Typography variant='h5' className={classes.header}>
-              Contact me
+              Contato
             </Typography>
             <ul className={classes.list}>
               <Typography variant='body2' component='li'>
@@ -61,7 +61,7 @@ export default function Footer() {
                   rel='noopener noreferrer'
                   target='_blank'
                 >
-                  Website Source Code
+                  Website Code
             </a>
               </Typography>
             </Container>
