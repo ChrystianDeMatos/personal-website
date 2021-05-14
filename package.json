@@ -8,7 +8,8 @@
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "react-scroll": "^1.8.2"
   },
   "scripts": {
     "dev": "BROWSER=none react-scripts start",

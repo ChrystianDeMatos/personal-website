@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/core/styles'
 import Toolbar from '@material-ui/core/Toolbar';
 import { AppBar, Button, Typography } from '@material-ui/core';
 
+import { Link as LinkScroll, animateScroll } from "react-scroll";
+
 import {
   NavLink,
   Link
@@ -32,9 +34,6 @@ export default function Header() {
   return (
     <AppBar position="fixed">
       <Toolbar>
-        {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-          <MenuIcon />
-        </IconButton> */}
         <Typography
           variant="h6"
           className={classes.title}
@@ -43,7 +42,7 @@ export default function Header() {
         >
           Chrystian de Matos
         </Typography>
-        <Button
+        {/* <Button
           className={classes.navLink}
           component={NavLink}
           to="/sobre"
@@ -56,20 +55,32 @@ export default function Header() {
           to="/portfolio"
         >
           Portfólio
-        </Button>
-        {/* <Typography
-          variant="h6"
-          className={classes.title}
-          component={Link}
-          exact to="/"
+        </Button> */}
+        <Button
+          className={classes.navLink}
+          component={LinkScroll}
+          activeClass="active"
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
         >
-          Chrystian de Matos
-        </Typography> */}
-        {/* <Button component={Link} to="/about" color="inherit">Login</Button>
-        <NavLink to="/about" activeStyle={{
-          fontWeight: "bold",
-          color: "red"
-        }}>Login</NavLink > */}
+          Sobre
+        </Button>
+        <Button
+          className={classes.navLink}
+          component={LinkScroll}
+          activeClass="active"
+          to="portfolio"
+          spy={true}
+          smooth={true}
+          offset={-80}
+          duration={500}
+        >
+          Portfólio
+        </Button>
+
       </Toolbar>
     </AppBar>
   )

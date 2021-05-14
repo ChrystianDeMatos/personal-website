@@ -4,14 +4,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import Portfolio from '../components/Portfolio'
 import { Box, Grid, Paper, Typography } from '@material-ui/core';
-// import Icon from '../components/Icon';
+
 import Background from '../components/Background';
 import SocialIcon from '../components/SocialIcon'
-import Profile3D from '../components/Profile3D'
 
-// import {ReactComponent as Gmail} from '../assets/icons/gmail.svg'
-// import {ReactComponent as Github} from '../assets/icons/github.svg'
-// import {ReactComponent as Linkedin} from '../assets/icons/linkedin.svg'
 import { Email, GitHub, LinkedIn } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
@@ -35,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
   },
   profileText: {
-    // width: '50'
   },
   portfolioTitle: {
     color: theme.palette.primary.main,
@@ -53,8 +48,8 @@ export default function Home() {
 
         {/* <Profile3D className={classes.profilePicture3D}/> */}
 
-        <img className={classes.profilePicture} src={profilePic} />
-        <Typography className={classes.profileTitle} variant="h4" component="h4">Chrystian de Matos</Typography>
+        <img className={classes.profilePicture} id="about" alt='Foto de perfil' src={profilePic}/>
+        <Typography className={classes.profileTitle} variant="h4" component="h4" >Chrystian de Matos</Typography>
 
         <Grid justify="center" container spacing={2}>
           <Grid item>
@@ -90,7 +85,7 @@ export default function Home() {
         <Background />
       </Box>
 
-      <Typography className={classes.portfolioTitle} variant="h5" component="h5">Portfólio</Typography>
+      <Typography className={classes.portfolioTitle} id="portfolio" variant="h5" component="h5">Portfólio</Typography>
 
       <Portfolio />
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Box, Container, Grid, makeStyles, Typography } from '@material-ui/core';
-import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   '@keyframes gradient': {

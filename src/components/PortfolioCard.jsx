@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { CardMedia, Grid, Paper, Tooltip } from '@material-ui/core';
+import { CardMedia, Grid, Paper } from '@material-ui/core';
 
 import Icon from './Icon'
 
@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
     display:'flex',
     flexDirection: 'column',
     minWidth: '100%'
-  // minWidth: 275,
 },
   title: {
   fontSize: 14,
